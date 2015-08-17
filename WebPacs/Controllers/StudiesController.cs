@@ -28,10 +28,6 @@ namespace WebPacs.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Study study = db.Studys.Find(id);
-            string strPatientID=study.PatientID.ToString();
-            Patient patient = db.Patients.Find(strPatientID);
-            ViewBag.PatientName = patient.Name.ToString();
-            ViewBag.Sex = patient.Sex.ToString();
             if (study == null)
             {
                 return HttpNotFound();
