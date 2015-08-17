@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebPacs.Models.Study>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>首页</h2>
+
+<p>
+    @Html.ActionLink("登记", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientID)
+        </th>
+        <th>
+           检查类型
+        </th>
+        <th>
+            检查部位
+        </th>      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BodyPartExamined)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.StudyID }) |
+            @Html.ActionLink("详细", "Details", new { id=item.StudyID }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.StudyID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebPacs.Models.Study>
+
+
+<h2>Index</h2>
+<p>select From @Model.Count() study:</p>
+<ul>
+    @foreach (var study in Model)
+    {
+        @*<li><a href=~/Patient/Browse?name=@study.BodyPartExamined>@study.Modality @study.BodyPartExamined 检查号:@study.StudyID</li>*@
+        <li>@Html.ActionLink((study.BodyPartExamined +"  "+ study.Modality),"Browse",new { name=study.BodyPartExamined })</li>
+    }
+</ul>

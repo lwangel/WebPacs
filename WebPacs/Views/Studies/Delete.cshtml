@@ -1,0 +1,168 @@
+﻿@model WebPacs.Models.Study
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Study</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyPartExamined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyPartExamined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogonDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogonDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registrar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registrar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudyDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfPhysiciansReadingStudy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfPhysiciansReadingStudy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssessDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssessDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assessor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assessor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamReport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamReport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conclusion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conclusion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportPrintStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportPrintStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilmPrintStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilmPrintStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportPrintDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportPrintDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilmPrintDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilmPrintDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
